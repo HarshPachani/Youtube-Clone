@@ -205,4 +205,17 @@ h1{
     .sidebar{
         display: none;
     }
+
+    .show-sidebar{
+        display: inline;
+        position: fixed;
+        top: 4.4rem;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 933px){
+    .header-search input{
+        width: 300px;
+    }
 }
