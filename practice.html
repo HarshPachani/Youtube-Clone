@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Roboto:wght@300;400;700&family=Ubuntu:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            height: 70px;
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+        }
+        .left img{
+            width: 100px;
+            margin-left: 15px;
+        }
+
+        .header i{
+            padding: 0 7px;
+            cursor: pointer;
+        }
+
+        .search form{
+            border: 1px solid #ddd;
+            height: 35px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .search input{
+            width: 500px;
+            padding: 10px;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+        }
+
+        .search button{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            border: none;
+            border-radius: 0;
+        }
+
+        .sidebar{
+            max-width: 15vw;
+            height: 100%;
+        }
+
+        .sidebar .catagory{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .catagory i{
+            margin: 5px;
+        }
+
+        .catagory span{
+            margin-left: 15px;
+            color: #ddd;
+        }
+
+        .catagories{
+            padding: 10px;
+        }
+
+        .catagory:hover{
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        hr{
+            height: 1px;
+            border: none;
+            background-color: #ddd;
+        }
+
+        .main{
+            display: flex;
+
+        }
+
+        .videos{
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: rgb(3, 3, 3);
+        }
+
+        .videos-container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .video{
+            width: 310px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 30px;
+        }
+
+        .thumbnail{
+            width: 100%;
+            height: 170px;
+        }
+
+        .thumbnail img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .author img{
+            object-fit: cover;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .details{
+            display: flex;
+            margin: 10px;
+        }
+
+        .title{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title h3{
+            color: rgb(3, 3, 3);
+            line-height: 18px;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .title a, span{
+            text-decoration: none;
+            color: rgb(96, 96, 96);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class = "header">
+        <div class="left">
+            <i class="material-symbols-outlined">menu</i>
+            <img src="Youtube.png" alt="" width = "100px" height="60px">
+        </div>
+
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="material-symbols-outlined">search</i>
+                </button>
+            </form>
+               
+        </div>
+
+        <div class="right">
+            <i class = "material-symbols-outlined">search</i>
+            <i class="material-symbols-outlined">videocam</i>
+            <i class="material-symbols-outlined">apps</i>
+            <i class="material-symbols-outlined">notifications</i>
+            <i class="material-symbols-outlined account">account_circle</i>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="sidebar">
+            <div class="catagories">
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">Home</i>
+                    <span>Home</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">local_fire_department</i>
+                    <span>Trending</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">subscriptions</i>
+                    <span>Subscriptions</span>
+                </div>
+            </div>
+
+            <hr>
+            <div class="catagories">
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">library_add_check</i>
+                    <span>Library</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">history</i>
+                    <span>History</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">play_arrow</i>
+                    <span>Your Videos</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">watch_later</i>
+                    <span>Watch Later</span>
+                </div>
+
+                <div class="catagory">
+                    <i class = "material-symbols-outlined">thumb_up</i>
+                    <span>Liked Videos</span>
+                </div>
+
+                <hr>
+            </div>
+        </div>
+
+        <div class="videos">
+            <h1>Recommanded</h1>
+            <div class="videos-container">
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/0lvfJ0eRcE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7YKgEGEZpdN98CcGVl8OGPD-bQQ" alt="">
+                    </div>
+
+                    <div class="details">
+                        <div class="author">
+                            <img src="https://yt3.ggpht.com/fQY8TFTQXE-or8vLceMjDHvewdBTfnh_79IQOuRS0t4xlGgaIGnTV08urwgMSHDswLotszhYAQ=s68-c-k-c0x00ffffff-no-rj-\" alt="">
+                        </div>
+
+                        <div class="title">
+                            <h3>Robot 3.0 Full Movie HD | Rajnikant | Salman Khan | Akshay Kumar | Katrina Kaif | Shankar | 2023</h3>
+                            <a href="">Scenes Special</a>
+                            <span>10M Views • 3 Months Ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
