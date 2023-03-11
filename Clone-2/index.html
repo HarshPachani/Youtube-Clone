@@ -29,32 +29,108 @@
 
         .header{
             background-color: #202020;
-            padding: 20px;
+            padding: 10px;
             display: flex;
+            justify-content: space-between;
         }
 
         .left{
             display: flex;
+            align-items: center;
+        }
+        .left h1{
+            color: white;
+        }
 
+        .middle input, .middle button{
+            background-color: black;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .middle button{
+            background-color: #31313131;
+            padding: 5px 10px;
+        }
+        input{
+            padding: 5px;
+            height: 34px;
+        }
+
+        .middle{
+            display: flex;
+            align-items: center;
+        }
+
+        #mic{
+            border-radius: 50%;
+            background-color: #181818;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .right img{
+            height : 28px;
+            border-radius: 50%;
+        }
+
+        .right{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .right i, .right img{
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- navbar starts -->
     <nav class = "header">
         <div class="left">
             <i class="material-symbols-outlined" id = "menu">menu</i>
-            <div class="image">
-                <img src="../Youtube.png" alt="Youtube.png" width = "230px">
-            </div>
+            <img src="logo.png" alt="Youtube.png" height = "50px">
+            <h1>YouTube</h1>
         </div>
 
         <div class="middle">
-            
+            <input type="text" placeholder="Search">
+            <button><i class="material-symbols-outlined" id = "search">search</i></button>
+            <i class="material-symbols-outlined" id = "mic">mic</i>
         </div>
 
         <div class="right">
-
+            <i class="material-symbols-outlined" id = "auto_videocam">auto_videocam</i>
+            <i class="material-symbols-outlined" id = "apps">apps</i>
+            <i class="material-symbols-outlined" id = "notifications">notifications</i>
+            <img src="images/unnamed (7).jpg" alt="Account.png">
         </div>
     </nav>
+    <!-- navbar ends -->
+
+    <!-- sidebar starts -->
+    <div class="sidebar">
+        <div class="lists">
+            <div class="list" style = "background-color: #181818;">
+                <i class="material-symbols-outlined" id = "home">home</i>
+                <i class="material-symbols-outlined" id = "explore">explore</i>
+                <i class="material-symbols-outlined" id = "smart_display">smart_display</i>
+                <i class="material-symbols-outlined" id = "rss_feed">rss_feed</i>
+            </div>
+        </div>
+        <hr>
+        <div class="lists">
+            <div class="list" style = "background-color: #181818;">
+                <i class="material-symbols-outlined" id = "video_library">video_library</i>
+                <i class="material-symbols-outlined" id = "history">history</i>
+                <i class="material-symbols-outlined" id = "slideshow">slideshow</i>
+                <i class="material-symbols-outlined" id = "playlist_play">playlist_play</i>
+    
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- sidebar ends -->
 </body>
 </html>
