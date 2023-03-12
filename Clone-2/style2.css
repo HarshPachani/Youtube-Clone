@@ -8,6 +8,28 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background: #717171;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
 h1{
     font-size: 1.5rem;
     color: #fff;
@@ -192,6 +214,10 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.chips-wrapper::-webkit-scrollbar{
+    height: 0;
+}
+
 .chip{
     margin: 12px 6px;
     background-color: #373737;
@@ -208,7 +234,7 @@ img {
     background-color: #4D4D4D;
 }
 
-.video-container{
+.video-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 18px;
@@ -218,25 +244,20 @@ img {
     height: calc(100vh - 116px);
 }
 
-.video-container-cover{
+.video-content-cover {
     position: relative;
     transition: .5s;
     transition-delay: .05s;
 }
 
-.video-container-cover:hover{
-    transform: translateY(60px);
-    z-index: 999;
-}
-
-.video-content{
+.video-content {
     margin-bottom: 25px;
     position: relative;
     transition: .5s;
     width: 100%;
 }
 
-.video-content:hover{
+.video-content:hover {
     transform: scale(1.5);
     z-index: 222;
     position: absolute;
@@ -244,22 +265,27 @@ img {
     background-color: #202020;
 }
 
-.video-container-cover:nth-child(4n+1):hover{
+.video-content-cover:hover {
+    transform: translateY(60px);
+    z-index: 999;
+}
+
+.video-content-cover:nth-child(4n+1):hover {
     transform: translate(50px, 60px);
     z-index: 999;
 }
 
-.video-container-cover:nth-child(4n+4):hover{
+.video-content-cover:nth-child(4n+4):hover {
     transform: translate(-30px, 60px);
     z-index: 999;
 }
 
-.video-content:hover .video-details{
+.video-content:hover .video-details {
     background-color: #202020;
     padding: 10px;
 }
 
-.video-box{
+.video-box {
     position: relative;
     width: auto;
     height: 145px;
@@ -340,5 +366,11 @@ img {
 
 .hidden-content{
     display: none;
-    padding: 5px 1
+    padding: 5px 10px;
+    background-color: #202020;
 }
+
+.video-content:hover .hidden-content{
+    display: block;
+}
+
