@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Roboto:wght@300;400;700&family=Ubuntu:wght@300&display=swap');
-
 
 *{
     margin: 0;
@@ -89,6 +87,13 @@ input{
     margin-left: 20px;
 }
 
+
+.mainbody{
+    /* height: calc(100vh - 70px);
+    display: flex; */
+    display: flex;
+}
+/* 
 .sidebar{
     display: flex;
     flex-direction: column;
@@ -126,4 +131,27 @@ hr{
 .lists h5{
     color: #aaa;
     padding: 0 20px;
+} */
+/* 
+.catagories{
+    background-color: #181818;
+    color: #fff;
+    cursor: copy;
+    /* z-index: 2000; */
+/*}
+.catagories ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
+.catagories ul li{
+    background-color: #373737;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.videos h4{
+    background-color: #121212;
+    color: white;
+} */
