@@ -17,9 +17,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        body{
             font-family: 'Roboto', sans-serif;
         }
 
@@ -82,6 +79,45 @@
         .right i, .right img{
             margin-left: 20px;
         }
+
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            background-color: #181818;
+            max-width: 18vw;
+            height: 100%;
+            overflow-y: scroll;
+        }
+
+        .lists{
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            background-color: #212121;
+            color: #fff;
+        }
+        .list{
+            display: flex;
+            align-items: center;
+            height: 40px;
+            cursor: pointer;
+            padding: 0px 30px;
+        }
+
+        .list:hover{
+            background-color: #303030;
+        }
+        hr{
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .list i{
+            margin-right: 20px;
+        }
+
+        .lists h5{
+            color: #aaa;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
@@ -112,24 +148,70 @@
     <!-- sidebar starts -->
     <div class="sidebar">
         <div class="lists">
-            <div class="list" style = "background-color: #181818;">
-                <i class="material-symbols-outlined" id = "home">home</i>
-                <i class="material-symbols-outlined" id = "explore">explore</i>
-                <i class="material-symbols-outlined" id = "smart_display">smart_display</i>
-                <i class="material-symbols-outlined" id = "rss_feed">rss_feed</i>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "home">home</i><span>Home</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "explore">explore</i><span>Explore</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "smart_display">smart_display</i><span>Shorts</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "rss_feed">rss_feed</i><span>Subscription</span>
             </div>
         </div>
         <hr>
         <div class="lists">
-            <div class="list" style = "background-color: #181818;">
-                <i class="material-symbols-outlined" id = "video_library">video_library</i>
-                <i class="material-symbols-outlined" id = "history">history</i>
-                <i class="material-symbols-outlined" id = "slideshow">slideshow</i>
-                <i class="material-symbols-outlined" id = "playlist_play">playlist_play</i>
-    
+            <div class="list">
+                <i class="material-symbols-outlined" id = "video_library">video_library</i><span>Library</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "history">history</i><span>History</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "slideshow">slideshow</i><span>Your videos</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "watch_later">pace</i><span>Watch later</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "playlist_play">playlist_play</i><span>All videos</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "show_more">keyboard_arrow_down</i><span>Show more</span>
             </div>
         </div>
         <hr>
+
+        <div class="lists">
+            <h5>MORE FROM YOUTUBE</h5>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "keyboard">keyboard_alt</i><span>Gaming</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "live">video_camera_back</i><span>Live</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "sports">workspace_premium</i><span>Sports</span>
+            </div>
+        </div>
+        <hr>
+
+        <div class="lists">
+            <div class="list">
+                <i class="material-symbols-outlined" id = "playlist_play">settings</i><span>Settings</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "playlist_play">flag</i><span>Report history</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "playlist_play">help</i><span>Help</span>
+            </div>
+            <div class="list">
+                <i class="material-symbols-outlined" id = "playlist_play">sms_failed</i><span>Send feedback</span>
+            </div>
+        </div>
     </div>
     <!-- sidebar ends -->
 </body>
