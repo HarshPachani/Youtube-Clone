@@ -271,11 +271,13 @@ img {
 }
 
 .video-content-cover:nth-child(4n+1):hover {
+    /*Here 4 is a cycle(which means every 4th children and 1 is the starting point)*/
     transform: translate(50px, 60px);
     z-index: 999;
 }
 
 .video-content-cover:nth-child(4n+4):hover {
+    /* Here 4 is a cycle(every 4th childeren and 4 is starting point) which means after 4th child every 4th children*/
     transform: translate(-30px, 60px);
     z-index: 999;
 }

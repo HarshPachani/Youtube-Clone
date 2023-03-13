@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .video-content-cover {
+        position: relative;
+        transition: 0.5s;
+        transition-delay: 0.05s;
+      }
+
+      .video-content {
+        margin-bottom: 25px;
+        position: relative;
+        transition: 0.5s;
+        width: 100%;
+      }
+
+      .video-box {
+        position: relative;
+        width: auto;
+        height: 145px;
+        display: block;
+      }
+
+      .video-details {
+        display: flex;
+        color: #fff;
+        padding-top: 12px;
+      }
+
+      .video-content:hover .channel-logo {
+        min-width: 25px;
+        height: 25px;
+      }
+
+      .channel-logo {
+        position: relative;
+        min-width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .detail {
+        margin-left: 12px;
+      }
+
+      .video-content:hover .title {
+        font-size: 0.7rem;
+      }
+
+      .title {
+        font-size: 0.9rem;
+      }
+
+      .video-content:hover .channel-name {
+        font-size: 0.6rem;
+      }
+
+      .channel-name {
+        font-size: 0.8rem;
+        margin-top: 10px;
+        color: #aaa;
+      }
+
+      .video-content:hover .views-upload {
+        font-size: 0.6rem;
+      }
+
+      .views-upload {
+        display: flex;
+        font-size: 0.8rem;
+        color: #aaa;
+      }
+
+      .btn {
+        padding: 5px 0;
+        color: #aaa;
+        text-transform: uppercase;
+        width: 100%;
+        background-color: #373737;
+        text-align: center;
+        margin: 5px 0;
+        font-size: 0.6rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn i {
+        font-size: 0.7rem;
+        margin-right: 5px;
+        color: #aaa;
+      }
+
+      .hidden-content {
+        display: none;
+        padding: 5px 10px;
+        background-color: #202020;
+      }
+
+      .video-content:hover .hidden-content {
+        display: block;
+      }
+
+      .video-content:hover {
+        transform: scale(1.5);
+        z-index: 222;
+        position: absolute;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+        background-color: #202020;
+      }
+
+      .video-content-cover:hover {
+        transform: translateY(60px);
+        z-index: 999;
+      }
+
+      .video-content-cover:nth-child(4n + 1):hover {
+        transform: translate(50px, 60px);
+        z-index: 999;
+      }
+
+      .video-content-cover:nth-child(4n + 4):hover {
+        transform: translate(-30px, 60px);
+        z-index: 999;
+      }
+
+      .video-content:hover .video-details {
+        background-color: #202020;
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="video-content-cover">
+      <div class="video-content">
+        <a href="https://www.youtube.com/watch?v=FNhjbNQ8Sik" class="video-box">
+          <img src="images/2.png" alt="" />
+        </a>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img src="images/unnamed (7).jpg" alt="" />
+          </div>
+          <div class="detail">
+            <h3 class="title">
+              React with firebase 9 (blog app with file upload)
+            </h3>
+            <div class="channel-name">iMe Creative</div>
+            <div class="views-upload">
+              <div class="views">281K views .</div>
+              <div class="upload">1 year ago</div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-content">
+          <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+          <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
